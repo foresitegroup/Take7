@@ -1,6 +1,23 @@
 <?php
 if (!isset($TopDir)) $TopDir = "";
 if (!isset($HeadInc)) $HeadInc = "";
+
+function VideoImage($url) {
+  if (strpos($url, 'youtu') > 0) {
+    $pattern = "/(?:[?&]v=|\/embed\/|\/1\/|\/v\/|https:\/\/(?:www\.)?youtu\.be\/)([^&\n?#]+)/";
+    preg_match($pattern, $url, $matches);
+    $TheImage = "https://img.youtube.com/vi/" . $matches[1] . "/maxresdefault.jpg";
+  }
+
+  if (strpos($url, 'vimeo') > 0) {
+    $pattern = "/(http|https)?:\/\/(www\.)?vimeo.com\/(?:channels\/(?:\w+\/)?|groups\/([^\/]*)\/videos\/|)(\d+)(?:|\/\?)/";
+    preg_match($pattern, $url, $matches);
+    $vimeo = unserialize(file_get_contents("http://vimeo.com/api/v2/video/" . $matches[4] . ".php"));
+    $TheImage = $vimeo[0]['thumbnail_large'];
+  }
+
+  return $TheImage;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,7 +33,7 @@ if (!isset($HeadInc)) $HeadInc = "";
     <meta name="description" content="">
     <meta name="keywords" content="">
     
-    <link href="//fonts.googleapis.com/css?family=Poppins:400,600|Raleway:500,600,700,800,900" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Poppins:400,600,700|Raleway:500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo $TopDir; ?>inc/main.css?<?php if ($TopDir == "") echo filemtime('inc/main.css'); ?>">
     

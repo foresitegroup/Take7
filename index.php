@@ -1,15 +1,37 @@
 <?php include "header.php"; ?>
 
 <div class="site-width">
-  <h1>Content (H1)</h1>
-  
-  Bacon ipsum dolor sit amet sausage bacon biltong, salami drumstick hamburger ham hock. Filet mignon ribeye meatball flank tri-tip tongue boudin, doner pig tenderloin. Beef cow turducken pork belly. Corned beef andouille short loin spare ribs. Short ribs frankfurter pig beef ribs. Sausage salami kielbasa cow jowl. Pork ribeye sirloin sausage bacon ham swine turkey biltong tenderloin boudin beef ribs pig hamburger.<br>
-  <br>
-  
-  Pig shankle andouille venison ham frankfurter strip steak ham hock, swine jerky ball tip flank hamburger. Leberkas cow short loin capicola ham hock bresaola. Pig beef ribs salami shankle, ham hock shank flank kielbasa sausage hamburger tenderloin. Salami shankle prosciutto sausage pork chop tri-tip. Short loin shankle tail capicola bresaola chuck drumstick pork belly t-bone shoulder hamburger salami corned beef leberkas meatloaf. Corned beef t-bone drumstick jowl shoulder brisket sirloin meatball turkey.<br>
-  <br>
-  
-  Bacon sirloin jowl tail pork loin corned beef sausage ribeye rump. Pork chop spare ribs turkey andouille strip steak. Venison pig bresaola ground round. Leberkas frankfurter pastrami prosciutto bresaola jowl.
+  <a href="contact.php" class="button home-start">Start Your Project</a>
+  <div style="clear: both;"></div>
+
+  <div id="home-videos" class="cf">
+    <?php
+    include_once "inc/fintoozler.php";
+    $result = $mysqli->query("SELECT * FROM videos WHERE publish = 'on' ORDER BY sort+0 ASC");
+
+    while($row = $result->fetch_array(MYSQLI_ASSOC)) {
+      $TheImage = ($row['image'] != "") ? "images/cms/" . $row['image'] : VideoImage($row['video']);
+      ?>
+      <a href="<?php echo $row['video']; ?>" class="swipebox-video" rel="<?php echo $row['id']; ?>" style="background-image: url(<?php echo $TheImage; ?>);">
+        <div>
+          <?php echo $row['title']; ?><br>
+          <span><?php echo $row['type']; ?></span>
+        </div>
+
+        <span></span>
+      </a>
+      <?php
+    }
+
+    $result->close();
+    ?>
+  </div>
+
+  <a href="contact.php" class="view-all-videos">View All Videos</a>
 </div>
+
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
     
 <?php include "footer.php"; ?>

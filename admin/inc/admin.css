@@ -1,3 +1,5 @@
+LABEL { margin-left: 0.5em; }
+
 #header { display: none; }
 
 #admin-header {
@@ -19,33 +21,6 @@
   width: 33%;
 }
 
-/*.banner.banner-admin {
-  min-height: 0;
-  height: 160px;
-  background: #252525;
-}
-
-.banner.banner-admin:after {
-  padding-top: 0;
-}
-
-.admin {
-  padding: 3em 0;
-}
-
-H3 {
-  margin: 0 0 0.3em;
-  color: #99CA3C;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1em;
-}
-
-STRONG {
-  font-weight: 800;
-}
-
 .one-half {
   float: left;
   width: 45%;
@@ -53,7 +28,12 @@ STRONG {
 
 .one-half.last {
   float: right;
-}*/
+}
+
+.one-half.edit {
+  float: none;
+  margin: 0 auto;
+}
 
 .controls {
   float: left;
@@ -117,15 +97,16 @@ STRONG {
   line-height: 1.4em;
 }
 
-.one-half.edit {
-  float: none;
-  margin: 0 auto;
+#home-banner INPUT[type="text"],
+#add-video #image { margin-bottom: 0; }
+
+.note {
+  display: block;
+  font-size: 70%;
+  margin-bottom: 30px;
 }
 
-.our-work-video {
-  float: none;
-  width: 100%;
-}
+#sortable .swipebox-video { width: 100%; }
 
 
 
@@ -219,6 +200,7 @@ STRONG {
   right: 1em;
   transform: translateY(-50%);
   display: inline-block;
+  z-index: 10;
 }
 
 #upload ul li p A:hover,
@@ -239,7 +221,7 @@ STRONG {
   float: left;
   width: 16px;
   height: 48px;
-  cursor: pointer;
+  /*cursor: pointer;*/
   position: relative;
 }
 

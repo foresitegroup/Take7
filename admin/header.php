@@ -30,7 +30,7 @@ include "../inc/fintoozler.php";
     <div class="menu">
       <ul>
         <li><a href="banner.php">Home Banner</a></li>
-        <li><a href="portfolio.php">Portfolio</a></li>
+        <li><a href="videos.php">Videos</a></li>
         <li><a href="testimonials.php">Testimonials</a></li>
       </ul>
     </div>
