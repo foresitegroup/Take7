@@ -108,6 +108,21 @@ LABEL { margin-left: 0.5em; }
 
 #sortable .swipebox-video { width: 100%; }
 
+.admin-testimonials .has-image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 1.5em;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+  position: relative;
+}
+
+.admin-testimonials .attr {
+  margin-top: 1em;
+}
+
 
 
 /*----------------------------

@@ -81,7 +81,7 @@ function VideoImage($url) {
           </video>
         </div>
 
-        <div class="tagline">Video With Vision.</div>
+        <h1>Video With Vision.</h1>
 
         <div class="link">
           <a href="<?php echo $row['video_link']; ?>" class="swipebox-video" rel="home-banner"><?php echo $row['video_link_text']; ?></a>
