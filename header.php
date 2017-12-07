@@ -40,12 +40,17 @@ function VideoImage($url) {
     <script type="text/javascript" src="<?php echo $TopDir; ?>inc/jquery-1.12.4.min.js"></script>
     <link rel="stylesheet" href="<?php echo $TopDir; ?>inc/swipebox/swipebox.css">
     <script type="text/javascript" src="<?php echo $TopDir; ?>inc/swipebox/jquery.swipebox.min.js"></script>
+    <script type="text/javascript" src="<?php echo $TopDir; ?>inc/jquery.scrollTo.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
         $("a[href^='http']").not("[href*='" + window.location.host + "']").prop('target','new');
         $("a[href$='.pdf']").prop('target', 'new');
 
         $(".swipebox-video").swipebox({autoplayVideos: true});
+
+        $("#to-top").click(function(e) { e.preventDefault();
+          $.scrollTo("#header",{duration: 600});
+        });
       });
     </script>
 

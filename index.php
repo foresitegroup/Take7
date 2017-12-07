@@ -80,6 +80,41 @@
   </div>
 </div>
 
-<br><br><br><br><br><br><br>
+<div id="home-process">
+  <div class="site-width">
+    <div class="left"><img src="images/home-process.jpg" alt=""></div>
+    <div class="right">At a<br>glance,<br>our process</div>
+    <div style="clear: both;"></div>
+
+    <div class="process">
+      <div>Concept</div>
+      We listen to your goals and craft a story that meets your needs and captures your intended audience.
+    </div>
+
+    <div class="process">
+      <div>Pre-production</div>
+      We tailor the right production gear and crew for the job. Location scouting. Casting. Production schedule.
+    </div>
+
+    <div class="process">
+      <div>Production</div>
+      With the best crew and the most up-to-date gear and technologies, we capture your footage.
+    </div>
+
+    <div class="process">
+      <div>Post-production</div>
+      Combining all the elements to bring the vision to fruition in the editing room. Full edit, sound, graphics, color correction and grading for the best aesthetic.
+    </div>
+
+    <div class="process">
+      <div>Delivery</div>
+      It's time to wow your audience at the next big event, online or wherever your video needs to live. We deliver a digital version of the cut with all the footage.
+    </div>
+
+    <div class="process last">
+      <a href="contact.php" class="button">Start Your Project</a>
+    </div>
+  </div>
+</div>
 
 <?php include "footer.php"; ?>
