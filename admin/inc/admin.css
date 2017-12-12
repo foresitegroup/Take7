@@ -1,6 +1,6 @@
 LABEL { margin-left: 0.5em; }
 
-#header { display: none; }
+#header, #footer-contact, #footer { display: none; }
 
 #admin-header {
   background: #000000;
